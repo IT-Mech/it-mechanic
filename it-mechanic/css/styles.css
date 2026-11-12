@@ -1,0 +1,404 @@
+:root {
+  --paper: #f4f0e6;
+  --paper-2: #fffdf8;
+  --ink: #17211c;
+  --ink-soft: #3e4c45;
+  --line: #ddd4c4;
+  --pine: #1b3a32;
+  --pine-2: #24493f;
+  --copper: #a84b24;
+  --cream: #f7f1e4;
+  --shadow: 0 18px 40px rgba(23, 33, 28, 0.08);
+  --serif: "Fraunces", "Iowan Old Style", Palatino, Georgia, serif;
+  --sans: "Source Sans 3", "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+[hidden] { display: none !important; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.55;
+}
+
+img, svg { display: block; max-width: 100%; }
+
+a { color: inherit; }
+
+.skip {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  background: var(--ink);
+  color: white;
+  padding: 0.6rem 0.9rem;
+  z-index: 10;
+}
+
+.skip:focus { top: 1rem; }
+
+.wrap {
+  width: min(1080px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: rgba(244, 240, 230, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 4.25rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  font-family: var(--serif);
+  font-weight: 560;
+  letter-spacing: -0.03em;
+  font-size: 1.25rem;
+}
+
+.mark {
+  width: 2.1rem;
+  height: 2.1rem;
+  flex: none;
+}
+
+.nav {
+  display: none;
+  gap: 1.15rem;
+  margin-left: auto;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--ink-soft);
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+
+.nav a:hover { color: var(--ink); }
+
+.call {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.4rem 0.95rem;
+  background: var(--pine);
+  color: white;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.nav + .call { margin-left: 0; }
+
+.call:hover { background: var(--pine-2); }
+
+.hero {
+  padding: 2.5rem 0 3rem;
+}
+
+.hero-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.8rem;
+  color: var(--copper);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+h1 {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 560;
+  font-size: clamp(3.4rem, 12vw, 6.4rem);
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+}
+
+h1 span {
+  display: block;
+  font-style: normal;
+  font-weight: 650;
+  color: var(--copper);
+}
+
+.lede {
+  max-width: 38rem;
+  margin: 1.25rem 0 0;
+  font-size: 1.2rem;
+  color: var(--ink-soft);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.btn-solid { background: var(--copper); color: white; }
+.btn-solid:hover { background: #8d3d1c; }
+.btn-ghost {
+  border: 1px solid var(--line);
+  background: transparent;
+}
+
+.ticket {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  box-shadow: var(--shadow);
+  padding: 1.25rem 1.25rem 1.1rem;
+}
+
+.ticket p { margin: 0; }
+
+.ticket-kicker {
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.ticket-phone {
+  display: block;
+  margin-top: 0.35rem;
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+  letter-spacing: -0.03em;
+  text-decoration: none;
+  line-height: 1.1;
+}
+
+.ticket hr {
+  border: 0;
+  border-top: 1px dashed var(--line);
+  margin: 1rem 0;
+}
+
+.ticket-label {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+.status {
+  display: inline-block;
+  margin-top: 0.45rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: #f0e4d4;
+  color: #6d3a1d;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.status.is-open {
+  background: #e3f0e6;
+  color: #1d4a32;
+}
+
+section { padding: 3.2rem 0; }
+
+.section-head {
+  max-width: 38rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 560;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.section-head p {
+  margin: 0.7rem 0 0;
+  color: var(--ink-soft);
+}
+
+.cards, .reasons {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.card {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: 1.15rem 1.15rem 1.25rem;
+}
+
+.card-num {
+  margin: 0;
+  color: var(--copper);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+}
+
+.card h3 {
+  margin: 0.35rem 0 0.4rem;
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  font-weight: 560;
+  letter-spacing: -0.02em;
+}
+
+.card p:last-child { margin: 0; color: var(--ink-soft); }
+
+.band {
+  background: var(--pine);
+  color: var(--cream);
+}
+
+.band .card {
+  background: transparent;
+  border-color: rgba(247, 241, 228, 0.18);
+}
+
+.band .card p:last-child,
+.band .section-head p { color: rgba(247, 241, 228, 0.82); }
+
+.band h2, .band h3 { color: white; }
+
+.visit-grid, .contact-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.panel {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: 1.2rem;
+}
+
+.panel h2 { font-size: 2rem; }
+
+.hours {
+  margin: 1rem 0 0;
+}
+
+.hours-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  padding: 0.55rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.hours-row dt, .hours-row dd { margin: 0; }
+.hours-row dd { font-weight: 700; }
+
+.hours-note {
+  margin: 0.9rem 0 0;
+  font-size: 1.15rem;
+}
+
+.address {
+  margin: 0.8rem 0 0;
+  font-size: 1.15rem;
+}
+
+.contact-phone {
+  display: inline-block;
+  margin-top: 0.4rem;
+  font-family: var(--serif);
+  font-size: clamp(2rem, 6vw, 3rem);
+  letter-spacing: -0.03em;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.fine {
+  margin: 0.8rem 0 0;
+  color: var(--ink-soft);
+}
+
+.site-footer {
+  padding: 2rem 0 2.4rem;
+  border-top: 1px solid var(--line);
+}
+
+.footer-inner {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.footer-name {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  letter-spacing: -0.03em;
+}
+
+.site-footer p { margin: 0; color: var(--ink-soft); }
+
+:focus-visible {
+  outline: 3px solid var(--copper);
+  outline-offset: 3px;
+}
+
+@media (min-width: 720px) {
+  .nav { display: flex; }
+  .call { margin-left: 0; }
+  .hero { padding: 4.5rem 0 4rem; }
+  .hero-grid {
+    grid-template-columns: 1.4fr 0.8fr;
+    align-items: end;
+    gap: 2rem;
+  }
+  .cards, .reasons { grid-template-columns: repeat(3, 1fr); }
+  .visit-grid, .contact-grid { grid-template-columns: 1fr 1fr; }
+  .footer-inner {
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
