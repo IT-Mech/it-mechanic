@@ -10,31 +10,19 @@
   var phoneHref = site.phoneTel ? "tel:" + site.phoneTel : "";
   var mailHref = site.email ? "mailto:" + site.email : "";
 
-  document.title = site.name + " | IT support in " + site.city;
+  document.title = site.name + " | Managed services in " + site.city;
 
   var description = document.querySelector('meta[name="description"]');
   if (description) {
     description.setAttribute(
       "content",
-      site.name + " is a locally owned IT service provider in " + site.city +
-      ". Computer consultancy for devices, networks, and accounts. Call " +
+      site.name + " provides managed services for small business in " + site.city +
+      ". Locally owned IT support for devices, networks, and accounts. Call " +
       site.phoneDisplay + "."
     );
   }
 
   setText("[data-field='name']", site.name);
-  var heading = document.querySelector("h1");
-  if (heading && site.name) {
-    var bits = site.name.split(" ");
-    heading.replaceChildren();
-    if (bits.length > 1) {
-      var emphasis = document.createElement("span");
-      emphasis.textContent = bits[0];
-      heading.append(emphasis, document.createTextNode(bits.slice(1).join(" ")));
-    } else {
-      heading.textContent = site.name;
-    }
-  }
   setText("[data-field='legal']", site.legalName);
   setText("[data-field='city']", site.city);
   setText("[data-field='city-line']", cityLine);

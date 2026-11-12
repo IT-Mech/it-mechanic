@@ -46,8 +46,12 @@ window.SITE = {
 
   services: [
     {
+      title: "Managed services",
+      text: "Ongoing support for the computers, networks, and accounts your business depends on, so they stay looked after and you can keep working."
+    },
+    {
       title: "IT support",
-      text: "Support so your systems stay managed, and you can keep the business moving without chasing every fault yourself."
+      text: "Help when something needs attention, from a single fault through to the day-to-day running of your systems."
     },
     {
       title: "Devices, networks, and accounts",
@@ -61,8 +65,8 @@ window.SITE = {
 
   reasons: [
     {
-      title: "Locally owned",
-      text: "The IT Mechanic is a locally owned and operated IT service provider, based in Christchurch."
+      title: "Proud to support small business",
+      text: "Small business is who we work with. The IT Mechanic is locally owned and based in Christchurch."
     },
     {
       title: "Speak to Anton",
