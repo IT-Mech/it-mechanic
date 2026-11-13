@@ -26,7 +26,6 @@
   setText("[data-field='legal']", site.legalName);
   setText("[data-field='city']", site.city);
   setText("[data-field='city-line']", cityLine);
-  setText("[data-field='nzbn']", site.nzbn);
   setText("[data-field='company-number']", site.companyNumber);
   setText("[data-field='phone']", site.phoneDisplay);
   setText("[data-field='contact']", site.contactName || "us");
@@ -190,7 +189,6 @@
         addressRegion: site.region,
         addressCountry: "NZ"
       },
-      identifier: site.nzbn,
       url: "https://itmech.nz/"
     };
     if (site.email) data.email = site.email;

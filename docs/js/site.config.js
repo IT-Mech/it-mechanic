@@ -13,9 +13,8 @@
 
 window.SITE = {
   name: "IT Mechanic",
-  legalName: "The IT Mechanic Limited",
+  legalName: "IT Mech",
   companyNumber: "9422682",
-  nzbn: "9429053606808",
 
   // Public location. You said Christchurch. The register's office is in Lincoln.
   city: "Christchurch",
@@ -60,6 +59,10 @@ window.SITE = {
     {
       title: "Security",
       text: "A practical look at whether your devices, networks, and accounts are properly secure. A breach can be costly for a business of any size."
+    },
+    {
+      title: "Hardware procurement",
+      text: "Help choosing and buying computers and other hardware for a small business."
     }
   ],
 
@@ -74,7 +77,7 @@ window.SITE = {
     },
     {
       title: "Computer consultancy",
-      text: "The IT Mechanic Limited is a registered New Zealand company. Its recorded activity is computer consultancy."
+      text: "IT Mech is a registered New Zealand company. Its recorded activity is computer consultancy."
     }
   ]
 };
